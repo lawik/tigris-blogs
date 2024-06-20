@@ -14,7 +14,7 @@ Mix.install([
 
 At Tigris we offer a number of novel and practical improvements beyond what your typical Object Storage does. We fit these within the existing common APIs or as graceful extensions when necessary. In this post we look at how you can take control of the Tigris caching mechanism if you feel the need.
 
-To try the examples and follow along you can install the flyctl CLI tool and then run `flyctl storage create` to get credentials. If you use Livebook, the collaborative coding notebook for Elixir, this entire post can be used from Livebook by [going here](https://TODO-link). Or you can copy and paste the examples into a .exs file to run Elixir as a script.
+To try the examples and follow along you can install the flyctl CLI tool and then run `flyctl storage create` to get credentials. If you use Livebook, the collaborative coding notebook for Elixir, this entire post can be used from Livebook by [going here](https://livebook.dev/run/?url=https://github.com/lawik/tigris-blogs/blob/main/1-eager-lazy/post.livemd). Or you can copy and paste the examples into a .exs file to run Elixir as a script.
 
 You need to install: `ex_aws, ex_aws_s3, hackney, poison and sweet_xml`
 
