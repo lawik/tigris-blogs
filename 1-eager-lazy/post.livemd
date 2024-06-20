@@ -1,4 +1,4 @@
-# Lazy & Eager Caching
+# Lazy & Eager Caching feat. Elixir
 
 ```elixir
 Mix.install([
@@ -72,6 +72,7 @@ Of course you deserve more control for when that is desirable. So you can upload
 # The PUT with cache headers
 bucket
 |> S3.put_object("myfile-2.txt", "mycontents")
+# a minor kludge to set the custom header, will see if we can PR the library :)
 |> then(fn op ->
   headers = Map.put(op.headers, "Cache-Control", "public, max-age=30")
   %{op | headers: headers}
@@ -110,6 +111,8 @@ bucket
 
 With that all the object data behind the keys you have listed immediately start moving to you across the network. This is incredibly convenient when traversing a large number of files stored and wanting to make fetching efficient for many small files where latency can otherwise ruin your throughput.
 
-## Section
+Now we've covered how to wrangle eager and lazy caching on Tigris with Elixir. This is just the beginning, we have a lot more to cover.
 
-<!-- livebook:{"offset":4247,"stamp":{"token":"XCP.nz30a5UolRf9qqN1OTLyq8LieVd2XJ0T65KE1DaUutFRODBA_032TyjGv3xiP9vvPygPDOcum87rd6pTWDQzuqu2ZX3JA9YGefRXbdVSdUM-LVCF-k1FzJg-OitjCNKQdDUyuchnXQFWf4ipSjgFo-ABCdAxru5uLRm_OMwy2qk1jF-kZj2ieiN8HzJoI_T_QgOniz12ei8XmxnNg_QTbrvrKVpQRe_MlKkjyDE","version":2}} -->
+Check back soon :)
+
+<!-- livebook:{"offset":4485,"stamp":{"token":"XCP.GP6Tr0KomrSgxMssK6AhRAxYrnM7emomTk6bib-RH9ScjvJ0DpP6NDyxo6zCi_jm-SKv2uwKgUwhZ8VUaC8r0EhPhN9jznpd2_3T3WuEWroUKjoARsxf6U9Up5CZRgnfuyxHucEH3w-qyuOsSgQqP7igpv72phCYyL7igueaA9prUJFDp40eiLjdoWIEGNrICp3CW3LuhYwfLgo4QIsHRCchCik0RlnDgFNcBnM","version":2}} -->
