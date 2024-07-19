@@ -27,7 +27,7 @@ Mix.install(
 
 I admit it. My first Tigris blog post about Eager and Lazy caching was kind of basic. It was important to cover the ground-work. The CDN aspect is important and I do like the summon-your-data pre-fetch header a lot. Now we get to the significantly more disruptive stuff. The things that while Tigris is an S3-compatible API it also provides features that enable entirely new use-cases and push the boundaries of what you can do with object storage. Let's see if we can't set your internal constraint-solver aflame with possibilities.
 
-First a bit of setup. Again, this post is also [a Livebook](TODO: link) which means that you can run all of it either locally with Livebook Desktop or on Fly.
+First a bit of setup. Again, this post is also [a Livebook](https://livebook.dev/run/?url=https://github.com/lawik/tigris-blogs/blob/main/2-metadata-querying.livemd) which means that you can run all of it either locally with Livebook Desktop or on Fly.
 
 ```elixir
 alias ExAws.S3
