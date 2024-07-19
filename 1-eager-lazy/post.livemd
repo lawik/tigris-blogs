@@ -36,6 +36,7 @@ Application.put_env(:ex_aws, :s3,
 ]
 |> Enum.each(fn key ->
   val = System.fetch_env!("LB_#{key}")
+  IO.puts("#{key}\t#{val}")
   System.put_env(key, val)
 end)
 
@@ -114,5 +115,3 @@ With that all the object data behind the keys you have listed immediately start 
 Now we've covered how to wrangle eager and lazy caching on Tigris with Elixir. This is just the beginning, we have a lot more to cover.
 
 Check back soon :)
-
-<!-- livebook:{"offset":4485,"stamp":{"token":"XCP.GP6Tr0KomrSgxMssK6AhRAxYrnM7emomTk6bib-RH9ScjvJ0DpP6NDyxo6zCi_jm-SKv2uwKgUwhZ8VUaC8r0EhPhN9jznpd2_3T3WuEWroUKjoARsxf6U9Up5CZRgnfuyxHucEH3w-qyuOsSgQqP7igpv72phCYyL7igueaA9prUJFDp40eiLjdoWIEGNrICp3CW3LuhYwfLgo4QIsHRCchCik0RlnDgFNcBnM","version":2}} -->
